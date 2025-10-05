@@ -1,16 +1,5 @@
 const container = document.getElementById("elementContainer")
 
-function loadFragment(id, url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById(id).innerHTML = html;
-        }).catch(error => console.log("Failed to load fragment", error))
-}
-
-loadFragment("header", "/html/fragments/header.html")
-loadFragment("footer", "/html/fragments/footer.html")
-
 const images = {
     "Go-karting": "/images/gokart.jpeg",
     "Paintball": "/images/paintball.jpg",
@@ -47,8 +36,9 @@ fetch("http://localhost:8080/index")
             //add button
             const button = document.createElement("button")
             button.textContent = "Wants to know more?"
+            const baseUrl = "http://localhost:63342/Frontend/AdventureXpFrontend/html/activity.html?_ijt=qvccfjjjrcmshvf0o6qukp6gid&_ij_reload=RELOAD_ON_SAVE"
             button.addEventListener('click', () => {
-                window.location.href = `/activity/${activity.id}` //TODO: fikses hvis endpoint bliver anderledes
+                window.location.href = `${baseUrl}&id=${activity.id}` //TODO: fikses hvis endpoint bliver anderledes
             })
             textSection.append(button)
 
