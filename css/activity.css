@@ -1,0 +1,23 @@
+.activity-container {
+    display: flex;
+    align-items: flex-start; /* Justerer toppen på linje */
+    gap: 100px; /* Afstand mellem billede og tekst */
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.activity-info{
+    color: #658244;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.activity-info h1 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.activity-info p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
