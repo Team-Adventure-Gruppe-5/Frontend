@@ -46,7 +46,6 @@ fetch("http://localhost:8080/index")
             if (index % 2 !== 0) {
                 section.classList.add("reverse");
             }
-            section.appendChild(image);
             section.appendChild(textSection);
 
             container.appendChild(section)
