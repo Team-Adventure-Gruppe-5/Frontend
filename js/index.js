@@ -35,7 +35,7 @@ fetch("http://localhost:8080/index")
 
             //add button
             const button = document.createElement("button")
-            button.textContent = "Wants to know more?"
+            button.textContent = "Want to know more?"
             const baseUrl = "http://localhost:63342/Frontend/AdventureXpFrontend/html/activity.html?_ijt=qvccfjjjrcmshvf0o6qukp6gid&_ij_reload=RELOAD_ON_SAVE"
             button.addEventListener('click', () => {
                 window.location.href = `${baseUrl}&id=${activity.id}` //TODO: fikses hvis endpoint bliver anderledes
