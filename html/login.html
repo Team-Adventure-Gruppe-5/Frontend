@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+<div class="container">
+    <img src="/images/adventureLogoBig.png" alt="AdventureXP Logo" class="logo">
+
+    <div class="login-box">
+        <h1>Sign in</h1>
+        <form id="loginForm">
+            <label for="username" class="input-label">Username</label>
+            <input type="text" id="username" required><br>
+
+            <label for="password" class="input-label">Password</label>
+            <input type="password" id="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+        <p id="error"></p>
+    </div>
+</div>
+
+<script src="/js/login.js"></script>
+</body>
+</html>
