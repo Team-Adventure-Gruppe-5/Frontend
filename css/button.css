@@ -1,4 +1,4 @@
-.text-container button, .introContainer button, .back-button {
+.text-container button, .introContainer button, .back-button, #bookingForm button {
     border: none;
     background-color: white;
     color: #A2B177;
