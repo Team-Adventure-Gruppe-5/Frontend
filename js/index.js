@@ -53,3 +53,23 @@ fetch("http://localhost:8080/index")
 
     }).catch(error => console.log("Error with fetching: ", error))
 
+document.addEventListener('DOMContentLoaded',()=>{
+    const packagesButton = document.getElementById("packages-button")
+
+    if(packagesButton){
+        packagesButton.addEventListener('click',()=>{
+            window.location.href="http://localhost:63342/Frontend/AdventureXpFrontend/html/allPackages.html?_ijt=oo8b9fn1kj0i3tcqieb7n0g2ib&_ij_reload=RELOAD_ON_SAVE"
+        })
+    }
+
+})
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    const requestButton = document.getElementById("request-button")
+
+    if(requestButton){
+        requestButton.addEventListener('click', ()=>{
+            window.location.href="http://localhost:63342/Frontend/AdventureXpFrontend/html/request.html?_ijt=35nqa0cca9l6r1293i2lh86bn0&_ij_reload=RELOAD_ON_SAVE"
+        })
+    }
+})

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All package</title>
+  <link rel="stylesheet" href="/css/general.css">
+  <link rel="stylesheet" href="/css/specific.css">
+
+</head>
+<body>
+<div id="header"></div>
+<div id="content"></div>
+<form action="" id="bookingForm">
+  <label for="firstname">Firstname</label>
+  <input type="text" id="firstname" required>
+
+  <label for="lastname">Lastname</label>
+  <input type="text" id="lastname" required>
+
+  <label for="mail">Mail</label>
+  <input type="email" id="mail" required>
+
+  <label for="phoneNumber">Phone number</label>
+  <input type="tel" id="phoneNumber" required>
+
+  <label for="participents">Participents</label>
+  <input type="number" id="participents" min="1" required>
+
+  <label for="date">Date</label>
+  <input type="date" id="date" required>
+
+  <label for="time">Time</label>
+  <input type="time" id="time" required>
+
+  <button type="submit">Book</button>
+</form>
+<div id="footer"></div>
+
+<script src="/js/loadfragments.js"></script>
+<script src="/js/package.js"></script>
+<script src="/js/booking.js"></script>
+</body>
+</html>

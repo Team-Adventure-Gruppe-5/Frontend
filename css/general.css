@@ -1,0 +1,71 @@
+/* Buttons */
+.text-container button, .introContainer button, .back-button, #bookingForm button {
+    border: none;
+    background-color: white;
+    color: #A2B177;
+    outline: 1px solid #A2B177;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding-inline: 60px;
+    padding-block: 10px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*Header */
+#header{
+    position: relative; /* gør absolut positionering muligt */
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    margin-bottom: 100px;
+}
+
+#header h1{
+    color: #658244;
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+#header h2{
+    color: #A2B177;
+    font-size: 20px;
+}
+
+#header img{
+    left: 10px;
+    position: absolute; /*placeres uden for flow*/
+    height: 200px;
+    transform: translateY(-50%); /* vertikal centrering*/
+    top: 50%; /*midt i headeren */
+}
+
+#header button{
+    background-color: #90A15F;
+    padding-inline: 60px;
+    padding-block: 10px;
+    right: 20px;
+    position: absolute;
+    top: 10%;
+    border-radius: 10px;
+    border: none;
+}
+
+/*Footer*/
+#footer{
+    background-color: #658244 ;
+    color: #A2B177;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+/* image */
+.imageContainer {
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
