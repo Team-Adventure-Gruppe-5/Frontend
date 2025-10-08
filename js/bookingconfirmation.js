@@ -13,7 +13,7 @@ fetch(`http://localhost:8080/booking-confirmation/${bookingID}`)
 
         container.innerHTML = `
     <div class="button-container">
- <button type="button" onclick="" class="back-button">Back</button>
+ <button type="button" onclick="history.back()" class="back-button">Back</button>
  </div>
  <div class="booking-container">
  <h1>Booking confirmation</h1>
@@ -21,7 +21,7 @@ fetch(`http://localhost:8080/booking-confirmation/${bookingID}`)
  <p>Firstname: ${booking.user.firstname}</p>
  <p>Lastname: ${booking.user.lastname}</p>
  <p>Mail: ${booking.user.mail}</p>
- <p>Phone number: ${booking.user.phonenumber}</p> 
+ <p>Phone number: ${booking.user.phoneNumber}</p> 
  <p>Participents: ${booking.participents}</p>
  <p>Date: ${booking.date}</p>
  <p>Time: ${booking.time}</p>
