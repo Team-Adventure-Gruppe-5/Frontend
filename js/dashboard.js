@@ -6,10 +6,11 @@ if (!employeeData) {
 const employee = JSON.parse(employeeData);
 
 document.getElementById("dashboardName").textContent = `${employee.firstname}'s Dashboard`;
+document.getElementById("role").textContent = `${employee.role}`
 
 const employeeImg = document.getElementById("employeeImg");
 employeeImg.src = `/images/employees/${employee.firstname}.png`;
-employeeImg.onerror = () => employeeImg.src = "/images/default.jpg";
+employeeImg.onerror = () => employeeImg.src = "/images/employees/default.jpg";
 
 
 document.getElementById("signOutBtn").addEventListener("click", () => {
@@ -17,27 +18,44 @@ document.getElementById("signOutBtn").addEventListener("click", () => {
     window.location.href = "login.html";
 });
 
-fetch("http://localhost:8080/bookings")
-    .then(response => response.json())
-    .then(bookings => {
-        const container = document.getElementById("bookingsContainer");
-        container.innerHTML = "";
-        if (bookings.length === 0) {
-            container.innerHTML = "<p>No bookings found</p>";
-            return;
-        }
+if (employee.role === "ADMIN") {
+    document.getElementById("adminSection").style.display = "block";
+} else if (employee.role === "ACTIVITY_EMPLOYEE") {
+    document.getElementById("activitySection").style.display = "block";
 
-        bookings.forEach(booking => {
-            const card = document.createElement("div");
-            card.classList.add("booking-card");
-            card.innerHTML =
-                `<p><strong>${booking.activity.name}</strong><p>` +
-                `<p>Participants: ${booking.participents}</p>` +
-                `<p>Date: ${booking.date}</p>` +
-                `<p>Time: ${booking.time}</p>` +
-                `<p>Booked by: ${booking.user.firstname} ${booking.user.lastname}</p>`;
+    fetch("http://localhost:8080/bookings")
+        .then(response => response.json())
+        .then(bookings => {
+            const container = document.getElementById("bookingsContainer");
+            container.innerHTML = "";
+            if (bookings.length === 0) {
+                container.innerHTML = "<p>No bookings found</p>";
+                return;
+            }
 
-            container.appendChild(card)
-        });
-    })
-    .catch(error => console.error("Couldn't load bookings:", error));
+
+            bookings.forEach((booking, index) => {
+                const activityName = booking.activity?.name || `Activity ID ${booking.activity}`;
+                const userName = booking.user?.firstname
+                    ? `${booking.user.firstname} ${booking.user.lastname}`
+                    : `User ID ${booking.user}`;
+
+
+                const card = document.createElement("div");
+                card.classList.add("booking-card");
+                card.innerHTML = `
+                <p><strong>Booking ${index + 1}</strong></p>
+                <p>Activity: ${activityName}</p>
+                <p>Participents: ${booking.participents}</p>
+                <p>Date: ${booking.date}</p>
+                <p>Time: ${booking.time}</p>
+                <p>Booked by: ${userName}</p>`;
+
+                container.appendChild(card);
+            })
+        })
+        .catch(error => console.error("Couldn't load bookings:", error));
+} else {
+    document.body.innerHTML = "<h2>Access denied</h2>";
+}
+
