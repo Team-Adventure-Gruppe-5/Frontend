@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Employee</title>
+    <link rel="stylesheet" href="/css/activity.css">
+    <link rel="stylesheet" href="/css/image.css">
+    <link rel="stylesheet" href="/css/button.css">
+</head>
+<div id="header"></div>
+<body>
+    <form action="http://localhost:8080/employees" id="formEmployee">
+        <label for="firstname">Firstname</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="role">Role</label>
+        <select id="role" name="role" required>
+            <option value="ADMIN">ADMIN</option>
+            <option value="EMPLOYEE">ACTIVITY_EMPLOYEE</option>
+        </select>
+
+        <button type="submit">Create Employee</button>
+    </form>
+
+<script src="../js/createEmployee.js"></script>
+<script src="../js/loadfragments.js"></script>
+
+</body>
+</html>
