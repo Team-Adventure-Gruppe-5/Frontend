@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', createFormEventListener);
 let formEmployee;
 
 function createFormEventListener() {
-    formEmployee = document.getElementById("formEmployee");
+    formEmployee = document.getElementById("bookingForm");
     formEmployee.addEventListener("submit", handleFormSubmit);
 }
 
