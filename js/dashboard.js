@@ -43,9 +43,9 @@ if (employee.role === "ADMIN") {
 
             myBookings.forEach((booking, index) => {
                 const activityName = booking.activity?.name || `Activity ID ${booking.activity}`;
-                const userName = booking.user?.firstname
-                    ? `${booking.user.firstname} ${booking.user.lastname}`
-                    : `User ID ${booking.user}`;
+                const customerName = booking.customer?.firstname
+                    ? `${booking.customer.firstname} ${booking.customer.lastname}`
+                    : `User ID ${booking.customer}`;
 
 
                 const card = document.createElement("div");
@@ -56,7 +56,7 @@ if (employee.role === "ADMIN") {
                 <p>Participents: ${booking.participents}</p>
                 <p>Date: ${booking.date}</p>
                 <p>Time: ${booking.time}</p>
-                <p>Booked by: ${userName}</p>`;
+                <p>Booked by: ${customerName}</p>`;
 
                 container.appendChild(card);
             })
