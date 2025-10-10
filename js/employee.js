@@ -8,6 +8,10 @@ window.addEventListener("DOMContentLoaded", ()=> {
 
 
 const container = document.getElementById("employeeContainer");
+const createEmpBtn = document.getElementById("createEmpbtn")
+
+createEmpBtn.addEventListener("click", () =>
+{window.location.href = "../html/createEmployee.html"});
 
 fetch("http://localhost:8080/employees")
     .then(response => response.json())

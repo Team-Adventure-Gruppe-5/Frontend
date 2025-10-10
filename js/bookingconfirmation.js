@@ -18,10 +18,10 @@ fetch(`http://localhost:8080/booking-confirmation/${bookingID}`)
  <div class="booking-container">
  <h1>Booking confirmation</h1>
  <p><strong>Booking ID: </strong>${bookingID}</p>
- <p>Firstname: ${booking.user.firstname}</p>
- <p>Lastname: ${booking.user.lastname}</p>
- <p>Mail: ${booking.user.mail}</p>
- <p>Phone number: ${booking.user.phoneNumber}</p> 
+ <p>Firstname: ${booking.customer.firstname}</p>
+ <p>Lastname: ${booking.customer.lastname}</p>
+ <p>Mail: ${booking.customer.mail}</p>
+ <p>Phone number: ${booking.customer.phoneNumber}</p> 
  <p>Participents: ${booking.participents}</p>
  <p>Date: ${booking.date}</p>
  <p>Time: ${booking.time}</p>
