@@ -2,6 +2,7 @@ console.log("jeg er i formEmployee");
 
 document.addEventListener('DOMContentLoaded', createFormEventListener);
 let formEmployee;
+const cancelbtn =document.getElementById("cancelbtn")
 
 function createFormEventListener() {
     formEmployee = document.getElementById("bookingForm");
@@ -62,3 +63,10 @@ async function postObjectAsJson(url, object, httpVerbum) {
     const data = await response.json();
     return data;
 }
+
+function cancel() {
+    window.location.href = "../html/employees.html"
+}
+
+cancelbtn.addEventListener('click', cancel)
+
