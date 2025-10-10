@@ -62,7 +62,7 @@
 
 /* Header over form */
 #bookingForm::before {
-    content: "Book your activity";
+   /* content: "Book your activity";   TODO: indsættes som et element i js eller html i stedet for i css*/
     display: block;
     text-align: center;
     font-size: 1.8rem;
