@@ -9,7 +9,7 @@ body {
     font-family: "poppins", sans-serif;
 }
 
-.container {
+.container { /*TODO: muligivs fjernes  */
     display: flex;
     align-items: center;
     justify-content: center;

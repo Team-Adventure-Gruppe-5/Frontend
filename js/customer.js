@@ -31,10 +31,19 @@ fetch(`http://localhost:8080/login-customer/${customer.id}`)
         if (updatedCustomer.bookings && updatedCustomer.bookings.length > 0) {
             updatedCustomer.bookings.forEach(booking => {
                 const card = document.createElement("div");
-                card.classList.add("booking-card");
+
+                let actOrPack =""
+                if(booking.activity){
+                    actOrPack = `<p>Activity: ${booking.activity.name}</p>`
+                } else if(booking.eventPackage){
+                    actOrPack = `<p>Event package: ${booking.eventPackage.name}</p>`
+                } else {
+                    actOrPack ="<p>No bookings found</p>"
+                }
+
                 card.innerHTML = `
                     <p><strong>Booking #${booking.id}</strong></p>
-                    <p>Activity: ${booking.activity.name}</p>
+                    ${actOrPack}
                     <p>Date: ${booking.date || "Ingen dato"}</p>
                     <p>Time: ${booking.time || "Ingen tid"}</p>
                     <p>Participants: ${booking.participents || 0}</p>

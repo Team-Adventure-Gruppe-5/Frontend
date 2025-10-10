@@ -37,10 +37,10 @@
 
 #header img{
     left: 10px;
-    position: absolute; /*placeres uden for flow*/
+    position: absolute;
     height: 200px;
-    transform: translateY(-50%); /* vertikal centrering*/
-    top: 50%; /*midt i headeren */
+    transform: translateY(-50%);
+    top: 50%;
 }
 
 #header button{
