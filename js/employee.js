@@ -25,9 +25,9 @@ fetch("http://localhost:8080/employees")
             const img = document.createElement("img");
             img.src = `/images/employees/${employee.firstname}.png`;
             img.alt = employee.firstname + " " + employee.lastname;
-            img.width = 50;  //TODO: rykkes muligvis til css ??
+            img.width = 50;
             img.height = 50;
-            img.onerror = () => img.src = "/images/default.jpg";
+            img.onerror = () => img.src = "/images/employees/default.jpg";
             card.appendChild(img);
 
 

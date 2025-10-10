@@ -26,19 +26,26 @@ if (employee.role === "ADMIN") {
     fetch("http://localhost:8080/bookings")
         .then(response => response.json())
         .then(bookings => {
+            const myBookings = bookings.filter(booking=>
+            booking.employees?.some(e => e.id === employee.id)
+            );
+
+
             const container = document.getElementById("bookingsContainer");
             container.innerHTML = "";
-            if (bookings.length === 0) {
-                container.innerHTML = "<p>No bookings found</p>";
+            if (myBookings.length === 0) {
+                container.innerHTML = "<p>No bookings assigned to you</p>";
                 return;
             }
 
 
-            bookings.forEach((booking, index) => {
+
+
+            myBookings.forEach((booking, index) => {
                 const activityName = booking.activity?.name || `Activity ID ${booking.activity}`;
-                const userName = booking.user?.firstname
-                    ? `${booking.user.firstname} ${booking.user.lastname}`
-                    : `User ID ${booking.user}`;
+                const customerName = booking.customer?.firstname
+                    ? `${booking.customer.firstname} ${booking.customer.lastname}`
+                    : `User ID ${booking.customer}`;
 
 
                 const card = document.createElement("div");
@@ -49,7 +56,7 @@ if (employee.role === "ADMIN") {
                 <p>Participents: ${booking.participents}</p>
                 <p>Date: ${booking.date}</p>
                 <p>Time: ${booking.time}</p>
-                <p>Booked by: ${userName}</p>`;
+                <p>Booked by: ${customerName}</p>`;
 
                 container.appendChild(card);
             })

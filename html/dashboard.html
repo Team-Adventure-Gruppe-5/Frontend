@@ -25,7 +25,7 @@
     <div id="adminSection" style="display:none;">
       <h2>Admin Tools</h2>
       <button onclick="window.location.href='employees.html'">Manage Employees</button>
-      <button onclick="window.location.href='activity.html'">Manage activites</button>
+      <button onclick="window.location.href='manage-bookings.html'">Manage activites</button>
     </div>
 
     <div id="activitySection" style="display:none;">
@@ -35,6 +35,12 @@
   </section>
 </main>
 
+
+<script>
+  document.getElementById("manageActivitiesBtn").addEventListener("click", () => {
+    window.location.href = "manage-bookings.html";
+  });
+</script>
 
 <script src="/js/dashboard.js"></script>
 
