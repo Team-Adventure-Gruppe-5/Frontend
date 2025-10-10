@@ -1,3 +1,21 @@
+/* Buttons */
+.text-container button, .introContainer button, .back-button, #bookingForm button {
+    border: none;
+    background-color: white;
+    color: #A2B177;
+    outline: 1px solid #A2B177;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding-inline: 60px;
+    padding-block: 10px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 /*Header */
 #header{
     position: relative; /* gør absolut positionering muligt */
@@ -42,5 +60,13 @@
     color: #A2B177;
     display: flex;
     justify-content: center;
-   gap: 90px;
+    gap: 90px;
+}
+
+/* image */
+.imageContainer {
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
 }

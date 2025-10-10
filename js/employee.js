@@ -1,3 +1,12 @@
+window.addEventListener("DOMContentLoaded", ()=> {
+    const welcomeMessage = sessionStorage.getItem("welcomeMessage");
+    if (welcomeMessage){
+        document.getElementById("welcomeMessage").textContent = welcomeMessage;
+        sessionStorage.removeItem("welcomeMessage");
+    }
+})
+
+
 const container = document.getElementById("employeeContainer");
 const createEmpBtn = document.getElementById("createEmpbtn")
 
@@ -16,7 +25,7 @@ fetch("http://localhost:8080/employees")
             const img = document.createElement("img");
             img.src = `/images/employees/${employee.firstname}.png`;
             img.alt = employee.firstname + " " + employee.lastname;
-            img.width = 50;
+            img.width = 50;  //TODO: rykkes muligvis til css ??
             img.height = 50;
             img.onerror = () => img.src = "/images/default.jpg";
             card.appendChild(img);

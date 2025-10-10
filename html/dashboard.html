@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adventure XP Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+<header class="dashboard-header">
+  <h1>Adventure XP</h1>
+  <button id="signOutBtn">Sign out</button>
+</header>
+
+<main class="dashboard-main">
+  <section class="dashboard-left">
+    <div class="profile">
+      <img id="employeeImg" src="/images/employees/default.jpg" alt="Employee photo">
+      <h2 id="dashboardName"></h2>
+      <h3 id="role"></h3>
+    </div>
+    <img src="/images/adventureLogoBig.png" alt="Adventure XP Logo" class="logo">
+  </section>
+
+  <section class="dashboard-right">
+    <div id="adminSection" style="display:none;">
+      <h2>Admin Tools</h2>
+      <button onclick="window.location.href='employees.html'">Manage Employees</button>
+      <button onclick="window.location.href='activity.html'">Manage activites</button>
+    </div>
+
+    <div id="activitySection" style="display:none;">
+      <h2>Activity Employee Area</h2>
+      <div id="bookingsContainer"><p>Loading bookings...</p></div>
+    </div>
+  </section>
+</main>
+
+
+<script src="/js/dashboard.js"></script>
+
+</body>
+</html>
