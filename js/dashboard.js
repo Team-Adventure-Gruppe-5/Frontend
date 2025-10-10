@@ -26,15 +26,22 @@ if (employee.role === "ADMIN") {
     fetch("http://localhost:8080/bookings")
         .then(response => response.json())
         .then(bookings => {
+            const myBookings = bookings.filter(booking=>
+            booking.employees?.some(e => e.id === employee.id)
+            );
+
+
             const container = document.getElementById("bookingsContainer");
             container.innerHTML = "";
-            if (bookings.length === 0) {
-                container.innerHTML = "<p>No bookings found</p>";
+            if (myBookings.length === 0) {
+                container.innerHTML = "<p>No bookings assigned to you</p>";
                 return;
             }
 
 
-            bookings.forEach((booking, index) => {
+
+
+            myBookings.forEach((booking, index) => {
                 const activityName = booking.activity?.name || `Activity ID ${booking.activity}`;
                 const userName = booking.user?.firstname
                     ? `${booking.user.firstname} ${booking.user.lastname}`
