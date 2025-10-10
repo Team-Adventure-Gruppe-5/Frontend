@@ -1,3 +1,4 @@
+//emp login
 document.getElementById("loginForm").addEventListener("submit", event => {
     event.preventDefault();
 
@@ -25,3 +26,5 @@ document.getElementById("loginForm").addEventListener("submit", event => {
             document.getElementById("error").textContent = error.message;
         });
 });
+
+
