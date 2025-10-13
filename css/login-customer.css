@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content {
+    flex: 1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#loginCustomerForm {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 100px auto;
+    padding: 30px;
+    border: 1px solid #A2B177;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+#loginCustomerForm label {
+    color: #A2B177;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#loginCustomerForm input {
+    padding: 10px;
+    border: 1px solid #A2B177;
+    border-radius: 8px;
+    background-color: white;
+    color: #0E1B10;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+#loginCustomerForm button[type="submit"] {
+    align-self: center;
+    margin-top: 10px;
+}
