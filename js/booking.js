@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mail: document.getElementById("mail").value,
             phoneNumber: parseInt(document.getElementById("phoneNumber").value),
             participents: parseInt(document.getElementById("participents").value),
-            date: document.getElementById("date").value.split("T")[0],
+            date: document.getElementById("date").value,
             time: document.getElementById("time").value
         };
 
