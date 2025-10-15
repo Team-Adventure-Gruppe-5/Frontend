@@ -5,10 +5,13 @@ window.addEventListener("DOMContentLoaded", ()=> {
         sessionStorage.removeItem("welcomeMessage");
     }
 })
-
-
 const container = document.getElementById("employeeContainer");
+
+const role = sessionStorage.getItem("role");
 const createEmpBtn = document.getElementById("createEmpbtn")
+if (role !== "ADMIN") {
+    createEmpBtn.style.display = "none";
+}
 
 createEmpBtn.addEventListener("click", () =>
 {window.location.href = "../html/createEmployee.html"});
@@ -65,13 +68,19 @@ fetch("http://localhost:8080/employees")
             const name = document.createElement("p");
             name.textContent = employee.firstname + " " + employee.lastname;
             card.appendChild(name);
-            const deleteEmpBtn = document.createElement("input");
-            deleteEmpBtn.type = "button";
-            deleteEmpBtn.setAttribute("value", "Delete Employee");
-            card.appendChild(deleteEmpBtn)
-            deleteEmpBtn.onclick = function () {
-                deleteEmployee(employee.id)
-                window.location.href = "../html/employees.html"
+
+            const userRole = sessionStorage.getItem("role");
+
+            if (userRole === "ADMIN") {
+                const deleteEmpBtn = document.createElement("input");
+                deleteEmpBtn.type = "button";
+                deleteEmpBtn.setAttribute("value", "Delete Employee");
+                deleteEmpBtn.id = "deleteEmpBtn"; // 👈 give it the same kind of handle as #createEmpbtn
+                card.appendChild(deleteEmpBtn)
+                deleteEmpBtn.onclick = function () {
+                    deleteEmployee(employee.id)
+                    window.location.href = "../html/employees.html"
+                }
             }
 
 
