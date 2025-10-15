@@ -1,5 +1,5 @@
 /* Activity */
-.activity-container {
+.box-container {
     display: flex;
     align-items: flex-start; /* Justerer toppen på linje */
     gap: 100px; /* Afstand mellem billede og tekst */
@@ -8,17 +8,17 @@
     padding: 20px;
 }
 
-.activity-info{
+.box-info{
     color: #658244;
     font-family: Verdana, Geneva, sans-serif;
 }
 
-.activity-info h1 {
+.box-info h1 {
     margin-top: 0;
     font-size: 2rem;
 }
 
-.activity-info p {
+.box-info p {
     font-size: 1.1rem;
     line-height: 1.5;
 }
@@ -60,9 +60,8 @@
     background-color: #8e9c67;
 }
 
-/* Header over form */
+/* Header above form */
 #bookingForm::before {
-   /* content: "Book your activity";   TODO: indsættes som et element i js eller html i stedet for i css*/
     display: block;
     text-align: center;
     font-size: 1.8rem;

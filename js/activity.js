@@ -27,9 +27,9 @@ function showActivity(activity) {
 <div class="button-container">
  <button type="button" onclick="history.back()" class="back-button">Back</button>
  </div>
-<div class="activity-container">
+<div class="box-container">
     <img src="${image}" alt="${activity.name}" class="imageContainer">
-    <div class="activity-info">
+    <div class="box-info">
     <h1>${activity.name}</h1>
     <p>${activity.description}</p>
     <p><strong>Price: </strong>${activity.price} DKK per person</p>
