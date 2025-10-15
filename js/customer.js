@@ -30,20 +30,10 @@ fetch(`http://localhost:8080/login-customer/${customer.id}/booking/${bookingId}`
 
         const bookingInfo = document.getElementById("bookingInfo");
         bookingInfo.innerHTML = "";
-
-            let actOrPack = ""
-            if (booking.activity) {
-                actOrPack = `<p>Activity: ${booking.activity.name}</p>`
-            } else if (booking.eventPackage) {
-                actOrPack = `<p>Event package: ${booking.eventPackage.name}</p>`
-            } else {
-                actOrPack = "<p>No bookings found</p>"
-            }
-
             const card = document.createElement("div");
             card.innerHTML = `
                     <p><strong>Booking #${booking.id}</strong></p>
-                    ${actOrPack}
+                    <p>Name: ${booking.name}</p>
                     <p>Date: ${booking.date || "No date"}</p>
                     <p>Time: ${booking.time || "No time"}</p>
                     <p>Participants: ${booking.participents || 0}</p>
