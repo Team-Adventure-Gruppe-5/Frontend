@@ -19,6 +19,7 @@ document.getElementById("loginForm").addEventListener("submit", event => {
         })
         .then(employee => {
             sessionStorage.setItem("employee", JSON.stringify(employee));
+            sessionStorage.setItem("role", employee.role);
             sessionStorage.setItem("welcomeMessage", `Welcome, ${employee.firstname}!`);
             window.location.href = "dashboard.html";
         })
