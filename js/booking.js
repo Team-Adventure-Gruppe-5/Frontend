@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
             mail: document.getElementById("mail").value,
             phoneNumber: parseInt(document.getElementById("phoneNumber").value),
             participents: parseInt(document.getElementById("participents").value),
-            date: document.getElementById("date").value,
-            time: parseInt(document.getElementById("time").value)
+            date: document.getElementById("date").value.split("T")[0],
+            time: document.getElementById("time").value
         };
 
         bookingData[idKey] = parseInt(id)
