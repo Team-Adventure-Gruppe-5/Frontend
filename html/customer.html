@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Customer page</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/specific.css">
 </head>
 <body>
 <div id="header"></div>
-<button id="signOutBtn">Sign out</button>
-<h1>Welcome, <span id="customerFirstname"></span> <span id="customerLastname"></span>!</h1>
-<p>Mail: <span id="customerMail"></span></p>
-<p>Phone number: <span id="customerPhoneNumber"></span></p>
-
-<h2>Your bookings:</h2>
-<ul id="bookingList"></ul>
+<div class="button-container">
+    <button id="signOutBtn">Sign out</button>
+</div>
+<div class="box-container">
+    <div class="box-info">
+        <h1>Welcome, <span id="customerFirstname"></span> <span id="customerLastname"></span>!</h1>
+        <br>
+        <hr>
+        <br>
+        <p>Mail: <span id="customerMail"></span></p>
+        <p>Phone number: <span id="customerPhoneNumber"></span></p>
+        <br>
+        <hr>
+        <br>
+        <h2>Your booking:</h2>
+        <div id="bookingInfo"></div>
+    </div>
+</div>
 <div id="footer"></div>
-<script src="/js/loadfragments.js"></script>
-<script src="/js/customer.js"></script>
+<script src="../js/loadfragments.js"></script>
+<script src="../js/customer.js"></script>
 </body>
 </html>

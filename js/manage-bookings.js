@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.classList.add("booking-card");
                 card.innerHTML = `
 <h3>Booking #${booking.id}</h3>
-<p><strong>Activity:</strong> ${booking.activity?.name || "Unknown"}</p>
+<p><strong>Activity:</strong> ${booking.name}</p>
 <p><strong>Date:</strong>${booking.date} </p>
 <p><strong>Time:</strong>${booking.time} </p>
 <p><strong>Participants:</strong>${booking.participents} </p>

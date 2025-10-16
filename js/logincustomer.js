@@ -1,4 +1,5 @@
-//customer login
+
+
 document.getElementById("loginCustomerForm").addEventListener('submit', event =>{
     event.preventDefault();
     const mail = document.getElementById("mail").value
@@ -15,6 +16,8 @@ document.getElementById("loginCustomerForm").addEventListener('submit', event =>
         })
         .then(customer => {
             sessionStorage.setItem("customer", JSON.stringify(customer))
+            sessionStorage.setItem("bookingId", bookingId)
+            console.log("booking ID: ", bookingId)
             window.location.href ="customer.html";
         })
         .catch(error => console.log("ERROR", error))

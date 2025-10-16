@@ -28,9 +28,9 @@ function showPackage(package){
 <div class="button-container">
  <button type="button" onclick="history.back()" class="back-button">Back</button>
  </div>
-<div class="activity-container">
+<div class="box-container">
     <img src="${image}" alt="${package.name}" class="imageContainer">
-    <div class="activity-info">
+    <div class="box-info">
     <h1>${package.name}</h1>
     <p>${package.description}</p>
     <p><strong>Price: </strong>${package.price} DKK per person</p>
