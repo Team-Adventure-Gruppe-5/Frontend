@@ -1,6 +1,7 @@
 const container = document.getElementById("employeeContainer");
 
 const role = sessionStorage.getItem("role");
+const backBtn = document.getElementById("back-button")
 const createEmpBtn = document.getElementById("createEmpbtn")
 if (role !== "ADMIN") {
     createEmpBtn.style.display = "none";
@@ -8,6 +9,8 @@ if (role !== "ADMIN") {
 
 createEmpBtn.addEventListener("click", () =>
 {window.location.href = "../html/createEmployee.html"});
+
+backBtn.addEventListener("click", () =>{window.location.href="../html/dashboard.html"});
 
 async function restDelete(url) {
     const fetchOptions = {
