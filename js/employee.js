@@ -1,10 +1,3 @@
-window.addEventListener("DOMContentLoaded", ()=> {
-    const welcomeMessage = sessionStorage.getItem("welcomeMessage");
-    if (welcomeMessage){
-        document.getElementById("welcomeMessage").textContent = welcomeMessage;
-        sessionStorage.removeItem("welcomeMessage");
-    }
-})
 const container = document.getElementById("employeeContainer");
 
 const role = sessionStorage.getItem("role");
