@@ -1,5 +1,5 @@
 /* Buttons */
-.text-container button, .introContainer button, .back-button, #bookingForm button, #createEmpbtn, #deleteEmpBtn, #signOutBtn {
+.text-container button, .introContainer button, .back-button, #bookingForm button, #createEmpbtn, #deleteEmpBtn, #signOutBtn, #back-button {
     border: none;
     background-color: white;
     color: #A2B177;

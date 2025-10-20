@@ -23,3 +23,7 @@ document.getElementById("loginCustomerForm").addEventListener('submit', event =>
         .catch(error => console.log("ERROR", error))
 
 })
+
+document.querySelector(".back-button").addEventListener("click", () => {
+    window.location.href = "index.html";
+});
